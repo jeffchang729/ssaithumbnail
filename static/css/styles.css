@@ -1,0 +1,66 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    background-color: #30845d76;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #2c3e50;
+}
+
+.header h1,
+.header span {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+.date-time {
+    margin-left: 10px;
+    color: #a5ba08;
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    transition: transform .3s;
+    background-color: #34495e;
+    border-radius: 4px;
+    cursor: pointer;/* 將滑鼠移到縮略圖上時，將指標改為可按下的圖示 */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.thumbnail img {
+    width: 200px;
+    height: 150px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.thumbnail div {
+    text-align: center;
+    padding: 3px;
+    background-color: #30845d76;
+    color: #ecf0f1;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 14px;
+}

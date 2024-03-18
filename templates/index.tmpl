@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail Viewer</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        .red-text {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>SSAI Thumbnail Viewer&nbsp;&nbsp;&nbsp;<span id="dateTime" class="date-time"></span></h1>
+    </div>
+    <div class="thumbnail-container" id="thumbnails">
+        <!-- Thumbnails will be dynamically inserted here using JavaScript -->
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeString = `${now.getMonth() + 1}/${now.getDate()} ${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+            document.getElementById('dateTime').textContent = dateTimeString;
+        }
+
+        function loadThumbnailsData() {
+            fetch('/thumbnails-data')
+                .then(response => response.json())
+                .then(thumbnailsData => {
+                    console.log('Received thumbnails data:', thumbnailsData); // 打印后端返回的数据
+                    const thumbnailsContainer = document.getElementById('thumbnails');
+                    thumbnailsContainer.innerHTML = ''; // Clear existing thumbnails
+                    thumbnailsData.forEach(thumbnail => {
+                        const thumbnailDiv = document.createElement('div');
+                        thumbnailDiv.className = 'thumbnail';
+                        const img = document.createElement('img');
+                        img.src = `${thumbnail.path}?t=${new Date().getTime()}`;
+                        img.alt = thumbnail.name;
+                        img.className = 'thumbnail-img';
+                        // 添加點擊事件
+                        img.addEventListener('click', function () {
+                            window.open(thumbnail.url); // 在新視窗中打開 URL
+                        });
+                        const chDiv = document.createElement('div');
+                        chDiv.textContent = `CH ${thumbnail.ch} ${thumbnail.chname}`;
+                        const genTimeDiv = document.createElement('div');
+
+                        if (thumbnail.equalCounter > 0) {
+                            genTimeDiv.innerHTML = `${thumbnail.genTime}  <span class='red-text'>未更新次數：${thumbnail.equalCounter}</span>`;
+                        } else {
+                            genTimeDiv.textContent = `${thumbnail.genTime}  未更新次數：${thumbnail.equalCounter}`;
+                        }
+
+                        thumbnailDiv.appendChild(img);
+                        thumbnailDiv.appendChild(chDiv);
+                        thumbnailDiv.appendChild(genTimeDiv);
+                        thumbnailsContainer.appendChild(thumbnailDiv);
+                    });
+                })
+                .catch(error => console.error('There has been a problem with your fetch operation:', error));
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000); 
+        loadThumbnailsData();
+        setInterval(loadThumbnailsData, 5 * 1000); 
+    </script>
+</body>
+
+</html>

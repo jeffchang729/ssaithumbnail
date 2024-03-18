@@ -1,0 +1,90 @@
+[
+    {
+        "ch": "06",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/FTV2/FTV_TS-1111_1.m3u8",
+        "product": "litv",
+        "cdnCode": "4gtv-4gtv155",
+        "name": "FTV2",
+        "chname": "民視HD"
+    },    
+    {
+        "ch": "80",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/SprtUL/SprtUL_1.m3u8",
+        "product": "litv",
+        "cdnCode": "litv-longturn10",
+        "name": "SprtUL", 
+        "chname": "博斯無限台"
+    },
+    {
+        "ch": "81",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/SprtTns/SprtTns_1.m3u8",
+        "product": "litv",
+        "cdnCode": "litv-longturn09",
+        "name": "SprtTns",
+        "chname": "博斯網球台"
+    },
+    {
+        "ch": "77",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/SprtGlf1/SprtGlf1_1.m3u8",
+        "product": "litv",
+        "cdnCode": "litv-longturn05",
+        "name": "SprtGlf1",
+        "chname": "博斯高球台"
+    },
+    {
+        "ch": "78",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/SprtGlf2/SprtGlf2_1.m3u8",
+        "product": "litv",
+        "cdnCode": "litv-longturn06",
+        "name": "SprtGlf2",
+        "chname": "博斯高球二台"
+    },
+    {
+        "ch": "52",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/CtiNEWS1/CTINews_1.m3u8",
+        "product": "litv",
+        "cdnCode": "4gtv-4gtv009",
+        "name": "CtiNEWS1",
+        "chname": "華視新聞"
+    },
+    {
+        "ch": "54",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/iNEWS/iNEWS_TS-1111_1.m3u8",
+        "product": "litv",
+        "cdnCode": "iNEWS",
+        "name": "iNEWS",
+        "chname": "民視新聞台"
+    },
+	{
+        "ch": "51",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/EBCNews/EBCNews_TS-1111_1.m3u8",
+        "product": "litv",
+        "cdnCode": "4gtv-4gtv152",
+        "name": "EBCNews",
+        "chname": "東森新聞台"
+    },
+    {
+        "ch": "51-1",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/EBCNews/EBCNews_TS-1111_1.m3u8",
+        "product": "friday",
+        "cdnCode": "4gtv-4gtv152",
+        "name": "EBCNews",
+        "chname": "東森新聞台friday"
+    },   
+    {
+        "ch": "55",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/TVBSN/TVBSN_TS-1111_1.m3u8",
+        "product": "litv",
+        "cdnCode": "4gtv-4gtv072",
+        "name": "TVBSN",
+        "chname": "TVBS新聞"
+    },
+    {
+        "ch": "55-1",
+        "url": "https://d2jc41c1shgcol.cloudfront.net/live/TVBSN/TVBSN_TS-1111_1.m3u8",
+        "product": "friday",
+        "cdnCode": "4gtv-4gtv072",
+        "name": "TVBSN",
+        "chname": "TVBS新聞friday"
+    }    
+]
